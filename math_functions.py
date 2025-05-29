@@ -20,10 +20,9 @@ def cube(x):
 
 # Test the functions
 if __name__ == "__main__":
-    print("Testing math functions:")
-    print(f"2 + 3 = {add(2, 3)}")
-    print(f"5 - 2 = {subtract(5, 2)}")
-    print(f"4 * 6 = {multiply(4, 6)}")
-    print(f"10 / 2 = {divide(10, 2)}")
-    print(f"7² = {square(7)}")
-    print(f"3³ = {cube(3)}")
+    add(2, 3)
+    subtract(5, 2)
+    multiply(4, 6)
+    divide(10, 2)
+    square(7)
+    cube(3)
