@@ -1,4 +1,8 @@
 import math
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def haversine_distance(lat1, lon1, lat2, lon2):
     """
@@ -11,6 +15,8 @@ def haversine_distance(lat1, lon1, lat2, lon2):
     :param lon2: Longitude of second point in degrees
     :return: Distance between points in kilometers
     """
+    logging.info(f'Calculating haversine distance: ({lat1}, {lon1}) to ({lat2}, {lon2})')
+    
     R = 6371  # Earth's radius in kilometers
     
     # Convert latitude and longitude to radians
