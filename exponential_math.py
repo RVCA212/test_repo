@@ -1,39 +1,27 @@
 import math
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 def power(base, exponent):
-    """
-    Calculate base raised to the power of exponent.
-    
-    Args:
-        base (float): The base number
-        exponent (float): The exponent
-    
-    Returns:
-        float: base raised to the power of exponent
-    """
-    return math.pow(base, exponent)
+    """Calculate base raised to the power of exponent."""
+    logger.info(f'Calculating {base} raised to the power of {exponent}')
+    result = math.pow(base, exponent)
+    logger.debug(f'Power calculation result: {result}')
+    return result
 
 def exponential(x):
-    """
-    Calculate exponential function (e^x).
-    
-    Args:
-        x (float): The input value
-    
-    Returns:
-        float: e raised to the power of x
-    """
-    return math.exp(x)
+    """Calculate exponential function (e^x)."""
+    logger.info(f'Calculating exponential of {x}')
+    result = math.exp(x)
+    logger.debug(f'Exponential calculation result: {result}')
+    return result
 
 def logarithm(x, base=math.e):
-    """
-    Calculate logarithm of x with optional base.
-    
-    Args:
-        x (float): The input value
-        base (float, optional): The logarithm base. Defaults to e.
-    
-    Returns:
-        float: logarithm of x with given base
-    """
-    return math.log(x, base)
+    """Calculate logarithm of x with optional base."""
+    logger.info(f'Calculating logarithm of {x} with base {base}')
+    result = math.log(x, base)
+    logger.debug(f'Logarithm calculation result: {result}')
+    return result
