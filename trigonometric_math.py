@@ -1,3 +1,9 @@
+import logging
+
+# Configure logging for this module
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
+
 import math
 
 def haversine_distance(lat1, lon1, lat2, lon2):
