@@ -1,5 +1,8 @@
 import math
 import cmath
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def factorial_recursive(n):
     """Calculate factorial using recursion."""
